@@ -8,7 +8,7 @@ model EVRPTW_MC_BSV_fix.mod;
 param instance_name symbolic;
 #LOAD THE DATA
 let instance_name := "@INSTANCE_NAME@";
-data ("instances/"&instance_name&.txt);
+data ("instances/@INSTANCE_NAME@.txt);
 
 
 

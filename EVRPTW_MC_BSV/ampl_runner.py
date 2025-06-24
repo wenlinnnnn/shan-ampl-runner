@@ -44,8 +44,8 @@ if __name__ == "__main__":
         output_dir.mkdir(parents=True, exist_ok=True)
         run_dir = run_root_dir/instance_folder_name
         run_dir.mkdir(parents=True, exist_ok=True)
-        
-    instances = [
+    
+    all_instances = [
         ("data_5","C101-5"),
         ("data_5","C103-5"),
         ("data_5","C206-5"),
@@ -140,9 +140,34 @@ if __name__ == "__main__":
         ("data_25","RC208-25"),
         
     ]
+    
+    shan_pc_instances = []
+    gemilang_pc_instances = []
+    workstation_pc_instances = []
+
+    for i, instance in enumerate(all_instances):
+        if i%3==0:
+            shan_pc_instances.append(instance)
+        elif i%3==1:
+            gemilang_pc_instances.append(instance)
+        else:
+            workstation_pc_instances.append(instance)
+
+
     time_limit = 28800
-    args_list = [(instance_folder_name, instance_name, time_limit) for (instance_folder_name, instance_name) in instances]
-    # with mp.Pool(4) as pool:
-    #     pool.starmap(call_ampl, args_list)
-    for args in args_list:
-        call_ampl(*args)
+    num_cpus = os.cpu_count()
+    if num_cpus is None:
+        num_cpus = 8
+    num_workers = int(num_cpus/4)
+    chosen_instances = gemilang_pc_instances # change this depending whether you ar ein workstaion or els
+    print(f"Running {num_workers} instances in parallel")
+
+    
+    args_list = [(instance_folder_name, instance_name, time_limit) for (instance_folder_name, instance_name) in chosen_instances]
+    with mp.Pool(num_workers) as pool:
+        pool.starmap(call_ampl, args_list)
+
+
+    # for args in args_list:
+    #     call_ampl(*args)
+    #     exit()

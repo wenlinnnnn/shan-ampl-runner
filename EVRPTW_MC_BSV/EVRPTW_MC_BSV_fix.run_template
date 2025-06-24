@@ -15,6 +15,7 @@ data ("instances/@INSTANCE_NAME@.txt");
 #CHANGE THE SOLVER (optional)
 option solver Gurobi;
 option gurobi_options "timelimit=@TIME_LIMIT@";
+option gurobi_options 'Threads=2';
 
 
 

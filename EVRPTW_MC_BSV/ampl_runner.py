@@ -46,6 +46,18 @@ if __name__ == "__main__":
         run_dir.mkdir(parents=True, exist_ok=True)
         
     instances = [
+        ("data_5","C101-5"),
+        ("data_5","C103-5"),
+        ("data_5","C206-5"),
+        ("data_5","C208-5"),
+        ("data_5","R104-5"),
+        ("data_5","R105-5"),
+        ("data_5","R202-5"),
+        ("data_5","R203-5"),
+        ("data_5","RC105-5"),
+        ("data_5","RC108-5"),
+        ("data_5","RC204-5"),
+        ("data_5","RC208-5"),
         ("data_10","C101-10"),
         ("data_10","C104-10"),
         ("data_10","C202-10"),
@@ -126,18 +138,7 @@ if __name__ == "__main__":
         ("data_25","RC206-25"),
         ("data_25","RC207-25"),
         ("data_25","RC208-25"),
-        ("data_5","C101-5"),
-        ("data_5","C103-5"),
-        ("data_5","C206-5"),
-        ("data_5","C208-5"),
-        ("data_5","R104-5"),
-        ("data_5","R105-5"),
-        ("data_5","R202-5"),
-        ("data_5","R203-5"),
-        ("data_5","RC105-5"),
-        ("data_5","RC108-5"),
-        ("data_5","RC204-5"),
-        ("data_5","RC208-5"),
+        
     ]
     time_limit = 28800
     args_list = [(instance_folder_name, instance_name, time_limit) for (instance_folder_name, instance_name) in instances]

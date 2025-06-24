@@ -24,11 +24,11 @@ def call_ampl(instance_folder_name, instance_name, time_limit):
     with open(run_filepath.absolute(), "w+", encoding="utf-8") as f:
         f.write(run_script)
     
-    cmd_args = ["ampl", run_script_filename]
+    cmd_args = ["ampl", run_filepath.absolute()]
     subprocess.run(cmd_args)
-    if os.path.exists(run_script_filename):
-        os.remove(run_script_filename)
-        print(f"Solver is Done, File {run_script_filename} has been removed.")
+    if os.path.exists(run_filepath.absolute()):
+        os.remove(run_filepath.absolute())
+        print(f"Solver is Done, File {run_filepath.absolute()} has been removed.")
 
 if __name__ == "__main__":
     output_root_dir = pathlib.Path()/"ampl_outputs"

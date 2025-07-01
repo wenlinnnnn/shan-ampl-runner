@@ -153,7 +153,13 @@ if __name__ == "__main__":
         else:
             workstation_pc_instances.append(instance)
 
-
+    print(len(shan_pc_instances))
+    print(len(gemilang_pc_instances))
+    print(len(workstation_pc_instances))
+    total_cycle = len(shan_pc_instances)/8 + len(gemilang_pc_instances)/8 + len(workstation_pc_instances)/16
+    print(len(shan_pc_instances)/8 + len(gemilang_pc_instances)/8 + len(workstation_pc_instances)/16)
+    print(total_cycle*8/24)
+    exit()
     time_limit = 28800
     num_cpus = os.cpu_count()
     if num_cpus is None:

@@ -1,0 +1,135 @@
+Gurobi 12.0.1:   lim:time = 28800
+  tech:threads = 2
+  mip:bestbound = 1
+Set parameter LogToConsole to value 1
+  tech:outlev = 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 2 threads
+
+Non-default parameters:
+TimeLimit  28800
+InfUnbdInfo  1
+Threads  2
+
+Optimize a model with 1377 rows, 519 columns and 4289 nonzeros
+Model fingerprint: 0xa27e9407
+Model has 216 quadratic objective terms
+Model has 216 quadratic constraints
+Model has 5 simple general constraints
+  5 MAX
+Variable types: 147 continuous, 372 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+03]
+  QMatrix range    [1e+00, 1e+01]
+  QLMatrix range   [1e+00, 3e+03]
+  Objective range  [9e+01, 7e+02]
+  QObjective range [2e+02, 2e+03]
+  Bounds range     [1e+00, 3e+03]
+  RHS range        [1e+00, 4e+03]
+  QRHS range       [3e+03, 3e+03]
+Presolve removed 491 rows and 123 columns
+Presolve time: 0.03s
+Presolved: 1171 rows, 645 columns, 8008 nonzeros
+Presolved model has 24 SOS constraint(s)
+Variable types: 123 continuous, 522 integer (522 binary)
+Found heuristic solution: objective 7669.9120000
+
+Root relaxation: objective 1.636199e+03, 80 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1636.19900    0   18 7669.91200 1636.19900  78.7%     -    0s
+H    0     0                    5557.9100000 1636.19900  70.6%     -    0s
+H    0     0                    5489.5530000 1636.19900  70.2%     -    0s
+     0     0 1636.19900    0   25 5489.55300 1636.19900  70.2%     -    0s
+     0     0 1636.19900    0   22 5489.55300 1636.19900  70.2%     -    0s
+     0     0 1636.19900    0   19 5489.55300 1636.19900  70.2%     -    0s
+     0     0 1636.19900    0   19 5489.55300 1636.19900  70.2%     -    0s
+     0     0 1636.19900    0   18 5489.55300 1636.19900  70.2%     -    0s
+     0     0 1636.19900    0   19 5489.55300 1636.19900  70.2%     -    0s
+     0     0 1636.19900    0   21 5489.55300 1636.19900  70.2%     -    0s
+     0     0 1636.19900    0   21 5489.55300 1636.19900  70.2%     -    0s
+H    0     2                    4622.1600029 1636.19900  64.6%     -    0s
+     0     2 1636.19900    0   21 4622.16000 1636.19900  64.6%     -    0s
+H   56    61                    4238.8580029 1636.19900  61.4%  15.3    0s
+H  602   420                    4160.2590029 1674.64400  59.7%  20.2    0s
+H 1089   693                    4135.2570029 1715.24800  58.5%  20.5    1s
+  4009  1894 2386.38077   24   24 4135.25700 2115.03956  48.9%  21.0    5s
+  8500  4196 2764.90425   28   20 4135.25700 2179.12798  47.3%  22.3   10s
+ 13549  6339 3482.13208   29   13 4135.25700 2236.38200  45.9%  22.5   15s
+ 15480  6990 2313.97577   28   21 4135.25700 2249.80115  45.6%  22.9   20s
+ 19781  7871 2453.99397   32   24 4135.25700 2249.80115  45.6%  24.4   25s
+ 25171  8209     cutoff   38      4135.25700 2300.15064  44.4%  24.9   30s
+ 30569  8649 infeasible   36      4135.25700 2333.51914  43.6%  24.8   35s
+ 36461  9128 4058.60800   42    4 4135.25700 2386.95300  42.3%  24.9   40s
+ 42049 10867 2944.90348   38   17 4135.25700 2425.71206  41.3%  25.0   45s
+ 48002 12774 2582.30922   33   17 4135.25700 2456.94900  40.6%  25.0   50s
+ 53757 14367     cutoff   43      4135.25700 2485.56802  39.9%  25.1   55s
+ 59963 15768 3684.32035   35   15 4135.25700 2519.25659  39.1%  25.2   60s
+ 65643 17321 2610.00080   34   21 4135.25700 2548.00400  38.4%  25.3   65s
+ 71377 18864 3596.07748   36    9 4135.25700 2567.90947  37.9%  25.3   70s
+ 77593 20441 3208.08526   43   24 4135.25700 2592.08933  37.3%  25.3   75s
+ 83943 22155 3068.45490   54   13 4135.25700 2609.53000  36.9%  25.1   80s
+ 89252 23548 3984.29200   35    7 4135.25700 2621.95100  36.6%  25.1   85s
+ 95429 25217     cutoff   40      4135.25700 2637.72320  36.2%  25.1   90s
+ 101856 27177     cutoff   50      4135.25700 2647.47800  36.0%  25.0   95s
+ 108664 28941 2951.77838   49   11 4135.25700 2658.57260  35.7%  24.9  100s
+ 114876 30248 3353.16600   41   10 4135.25700 2674.59300  35.3%  24.8  105s
+ 121091 31432 3156.99446   36   23 4135.25700 2691.63900  34.9%  24.8  110s
+ 127396 32706 2976.93108   36   21 4135.25700 2710.25450  34.5%  24.8  115s
+ 133520 33991     cutoff   47      4135.25700 2724.52614  34.1%  24.8  120s
+ 139413 35371 3155.15244   42   23 4135.25700 2734.34712  33.9%  24.8  125s
+ 145873 36668 3248.11654   34   19 4135.25700 2746.31170  33.6%  24.8  130s
+ 152623 37936 3576.25497   45   20 4135.25700 2759.62155  33.3%  24.8  135s
+ 159066 38998 2949.89037   45   16 4135.25700 2772.40403  33.0%  24.8  140s
+ 165282 40048 3070.97894   42   22 4135.25700 2784.74444  32.7%  24.8  145s
+ 171230 40963 3831.84789   45   23 4135.25700 2796.80712  32.4%  24.8  150s
+ 177709 42262 3582.60354   35   22 4135.25700 2807.07394  32.1%  24.7  155s
+ 184181 43430 2928.18591   39   13 4135.25700 2816.29003  31.9%  24.7  160s
+ 189850 44574 2925.10942   46   12 4135.25700 2823.45947  31.7%  24.6  165s
+ 195804 45686 infeasible   57      4135.25700 2830.18468  31.6%  24.5  170s
+ 202330 46755 infeasible   42      4135.25700 2838.56381  31.4%  24.5  175s
+
+<BREAK> (solver)
+
+Cutting planes:
+  Gomory: 4
+  Cover: 1
+  Implied bound: 4
+  Projected implied bound: 1
+  MIR: 4
+  Mixing: 1
+  Flow cover: 7
+  Zero half: 4
+  RLT: 12
+  Relax-and-lift: 1
+
+Explored 202855 nodes (4971408 simplex iterations) in 175.35 seconds (362.13 work units)
+Thread count was 2 (of 16 available processors)
+
+Solution count 8: 4135.26 4160.26 4238.86 ... 7669.91
+
+Solve interrupted
+Best objective 4.135257002882e+03, best bound 2.839636151931e+03, gap 31.3311%
+
+AMPL MP initial flat model has 509 variables (17 integer, 355 binary);
+Objectives: 1 quadratic; 
+Constraints:  1377 linear; 216 quadratic;
+Algebraic expressions:  5 max;
+
+AMPL MP final model has 519 variables (17 integer, 355 binary);
+Objectives: 1 quadratic; 
+Constraints:  1377 linear; 216 quadratic;
+Algebraic expressions:  5 max;
+
+
+Gurobi 12.0.1: interrupted, feasible solution; objective 4135.257003
+4.97141e+06 simplex iterations
+202855 branching nodes
+absmipgap=1295.62, relmipgap=0.313311
+
+suffix bestbound OUT;

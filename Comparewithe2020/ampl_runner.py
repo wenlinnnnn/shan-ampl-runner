@@ -9,6 +9,9 @@ def call_ampl(instance_folder_name, instance_name, time_limit, num_threads):
     template_filename = "testwithIEEE.run_template"
     instance_complete_name = f"{instance_folder_name}/{instance_name}"
     output_dir = "ampl_outputs"
+    log_dir = pathlib.Path("logs")
+    log_dir.mkdir(parents=True, exist_ok=True)
+    log_path = log_dir/(instance_name+".txt")
     
     with open(template_filename, "r", encoding="utf-8") as f:
         template = f.read()
@@ -26,7 +29,8 @@ def call_ampl(instance_folder_name, instance_name, time_limit, num_threads):
         f.write(run_script)
     
     cmd_args = ["ampl", run_filepath.absolute()]
-    subprocess.run(cmd_args)
+    with open(log_path.absolute(), "w", encoding="utf-8") as logfile:
+        subprocess.run(cmd_args, stdout=logfile, stderr=subprocess.STDOUT)
     if os.path.exists(run_filepath.absolute()):
         # os.remove(run_filepath.absolute())
         print(f"Solver is Done, File run file is saved in {run_filepath.absolute()}.")

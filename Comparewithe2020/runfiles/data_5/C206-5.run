@@ -8,23 +8,23 @@ model testwithIEEE.mod;
 param instance_name symbolic;
 #LOAD THE DATA
 #let instance_name := "C101-5.txt";
-data ("@INSTANCE_NAME@.txt");
+data ("data_5/C206-5.txt");
 
 let Cs := 1.5 * ((Q / g) * Cr);
 
 #CHANGE THE SOLVER (optional)
 option solver Gurobi;
-option gurobi_options "timelimit=@TIME_LIMIT@ Threads=@NUM_THREADS@ bestbound=1 outlev=1";
+option gurobi_options "timelimit=28800 Threads=2 bestbound=1 outlev=1";
 
 
 #SOLVE
 solve;
 
 # 設定輸出檔案名稱
-param output_file symbolic default "@INSTANCE_NAME@";
+param output_file symbolic default "data_5/C206-5";
 
 # 設定完整的 Windows 路徑
-param output_dir symbolic default "@OUTPUT_DIR@/";
+param output_dir symbolic default "ampl_outputs/";
 # 設定完整的輸出檔案路徑
 param output_path symbolic default output_dir & output_file & ".txt";
 

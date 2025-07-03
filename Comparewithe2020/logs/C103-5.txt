@@ -1,0 +1,106 @@
+Gurobi 12.0.1:   lim:time = 28800
+  tech:threads = 2
+  mip:bestbound = 1
+Set parameter LogToConsole to value 1
+  tech:outlev = 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 2 threads
+
+Non-default parameters:
+TimeLimit  28800
+InfUnbdInfo  1
+Threads  2
+
+Optimize a model with 636 rows, 273 columns and 1984 nonzeros
+Model fingerprint: 0xcee91014
+Model has 72 quadratic objective terms
+Model has 72 quadratic constraints
+Model has 5 simple general constraints
+  5 MAX
+Variable types: 96 continuous, 177 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+03]
+  QMatrix range    [1e+00, 1e+01]
+  QLMatrix range   [1e+00, 1e+03]
+  Objective range  [5e+01, 6e+02]
+  QObjective range [2e+02, 2e+03]
+  Bounds range     [1e+00, 1e+03]
+  RHS range        [1e+00, 1e+03]
+  QRHS range       [1e+03, 1e+03]
+Presolve removed 268 rows and 96 columns
+Presolve time: 0.02s
+Presolved: 473 rows, 264 columns, 2503 nonzeros
+Presolved model has 12 SOS constraint(s)
+Variable types: 69 continuous, 195 integer (195 binary)
+Found heuristic solution: objective 2850.7570000
+
+Root relaxation: objective 1.224987e+03, 81 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1224.98659    0   19 2850.75700 1224.98659  57.0%     -    0s
+     0     0 1351.01018    0   19 2850.75700 1351.01018  52.6%     -    0s
+H    0     0                    2850.0910000 1362.14950  52.2%     -    0s
+     0     0 1365.88500    0   19 2850.09100 1365.88500  52.1%     -    0s
+     0     0 1365.88500    0   18 2850.09100 1365.88500  52.1%     -    0s
+H    0     0                    2672.9020000 1365.88500  48.9%     -    0s
+     0     0 1365.88500    0   13 2672.90200 1365.88500  48.9%     -    0s
+H    0     0                    2672.2400000 1365.88500  48.9%     -    0s
+H    0     0                    2444.9770000 1365.88500  44.1%     -    0s
+     0     0 1365.88500    0   13 2444.97700 1365.88500  44.1%     -    0s
+     0     0 1365.88500    0   17 2444.97700 1365.88500  44.1%     -    0s
+     0     0 1365.88500    0   16 2444.97700 1365.88500  44.1%     -    0s
+H    0     0                    2256.6660000 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   18 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   17 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   15 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   15 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   16 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   17 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   17 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   14 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   16 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   15 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   14 2256.66600 1365.88500  39.5%     -    0s
+     0     2 1365.88500    0   14 2256.66600 1365.88500  39.5%     -    0s
+
+Cutting planes:
+  Learned: 9
+  Gomory: 2
+  Cover: 55
+  Implied bound: 71
+  MIR: 44
+  StrongCG: 2
+  Inf proof: 8
+  RLT: 10
+  Relax-and-lift: 8
+
+Explored 5193 nodes (56196 simplex iterations) in 1.59 seconds (1.65 work units)
+Thread count was 2 (of 16 available processors)
+
+Solution count 7: 2256.67 2444.98 2672.24 ... 2850.76
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.256666000000e+03, best bound 2.256666000000e+03, gap 0.0000%
+
+AMPL MP initial flat model has 266 variables (11 integer, 166 binary);
+Objectives: 1 quadratic; 
+Constraints:  636 linear; 72 quadratic;
+Algebraic expressions:  5 max;
+
+AMPL MP final model has 273 variables (11 integer, 166 binary);
+Objectives: 1 quadratic; 
+Constraints:  636 linear; 72 quadratic;
+Algebraic expressions:  5 max;
+
+
+Gurobi 12.0.1: optimal solution; objective 2256.666
+56196 simplex iterations
+5193 branching nodes
+absmipgap=4.54747e-13, relmipgap=0
+
+suffix bestbound OUT;

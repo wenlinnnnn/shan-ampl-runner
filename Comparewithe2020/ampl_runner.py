@@ -159,8 +159,8 @@ if __name__ == "__main__":
             workstation_pc_instances.append(instance)
 
     PC = "GEMILANG"
-    PC = "SHAN"
-    PC = "WORKSTATION"
+    # PC = "SHAN"
+    # PC = "WORKSTATION"
 
     chosen_instances = gemilang_pc_instances # change this depending whether you ar ein workstaion or els
     if PC == "SHAN":
@@ -176,11 +176,12 @@ if __name__ == "__main__":
     print(f"Number of instances to be run: {len(chosen_instances)}")
     print(f"Running {num_workers} instances in parallel")
     print(f"Estimated running for {(int(len(chosen_instances)/num_workers) + 1)*time_limit/3600} Hours")
+    # for ist in chosen_instances:
+    #     print(ist)
     
-    
-    args_list = [(instance_folder_name, instance_name, time_limit, num_threads) for (instance_folder_name, instance_name) in chosen_instances]
-    with mp.Pool(num_workers) as pool:
-        pool.starmap(call_ampl, args_list)
+    # args_list = [(instance_folder_name, instance_name, time_limit, num_threads) for (instance_folder_name, instance_name) in chosen_instances]
+    # with mp.Pool(num_workers) as pool:
+    #     pool.starmap(call_ampl, args_list)
 
 
     # for args in args_list:

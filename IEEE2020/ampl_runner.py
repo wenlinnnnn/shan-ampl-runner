@@ -6,7 +6,7 @@ import subprocess
 
 def call_ampl(instance_folder_name, instance_name, time_limit, num_threads):
     template: str
-    template_filename = "testwithIEEE.run_template"
+    template_filename = "IEEE.run_template"
     instance_complete_name = f"{instance_folder_name}/{instance_name}"
     output_dir = "ampl_outputs"
     log_dir = pathlib.Path("logs")

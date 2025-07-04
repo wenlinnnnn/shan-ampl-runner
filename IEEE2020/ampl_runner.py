@@ -6,17 +6,8 @@ import subprocess
 
 def call_ampl(instance_folder_name, instance_name, time_limit, num_threads):
     template: str
-    template_filename = "testwithIEEE.run_template"
+    template_filename = "IEEE.run_template"
     instance_complete_name = f"{instance_folder_name}/{instance_name}"
-
-    # check if it is done
-    instance_result_path =  pathlib.Path("ampl_outputs")/instance_folder_name/f"{instance_name}.txt"
-    if instance_result_path.is_file():
-        print(f"{instance_complete_name} is done previously")
-        return
-    print(f"{instance_complete_name} has started")
-        
-
     output_dir = "ampl_outputs"
     log_dir = pathlib.Path("logs")
     log_dir.mkdir(parents=True, exist_ok=True)

@@ -8,6 +8,15 @@ def call_ampl(instance_folder_name, instance_name, time_limit, num_threads):
     template: str
     template_filename = "testwithIEEE.run_template"
     instance_complete_name = f"{instance_folder_name}/{instance_name}"
+
+    # check if it is done
+    instance_result_path =  pathlib.Path("ampl_outputs")/instance_folder_name/f"{instance_name}.txt"
+    if instance_result_path.is_file():
+        print(f"{instance_complete_name} is done previously")
+        return
+    print(f"{instance_complete_name} has started")
+        
+
     output_dir = "ampl_outputs"
     log_dir = pathlib.Path("logs")
     log_dir.mkdir(parents=True, exist_ok=True)
@@ -179,9 +188,9 @@ if __name__ == "__main__":
     # for ist in chosen_instances:
     #     print(ist)
     
-    # args_list = [(instance_folder_name, instance_name, time_limit, num_threads) for (instance_folder_name, instance_name) in chosen_instances]
-    # with mp.Pool(num_workers) as pool:
-    #     pool.starmap(call_ampl, args_list)
+    args_list = [(instance_folder_name, instance_name, time_limit, num_threads) for (instance_folder_name, instance_name) in chosen_instances]
+    with mp.Pool(num_workers) as pool:
+        pool.starmap(call_ampl, args_list)
 
 
     # for args in args_list:

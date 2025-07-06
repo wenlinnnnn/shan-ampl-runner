@@ -1,0 +1,97 @@
+Gurobi 12.0.0:   lim:time = 28800
+  tech:threads = 2
+  mip:bestbound = 1
+Set parameter LogToConsole to value 1
+  tech:outlev = 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (win64 - Windows 11.0 (26100.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i7-11700 @ 2.50GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 8 physical cores, 16 logical processors, using up to 2 threads
+
+Non-default parameters:
+TimeLimit  28800
+InfUnbdInfo  1
+Threads  2
+
+Optimize a model with 427 rows, 212 columns and 1572 nonzeros
+Model fingerprint: 0x25bff9be
+Model has 72 quadratic objective terms
+Model has 72 quadratic constraints
+Variable types: 51 continuous, 161 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+03]
+  QMatrix range    [1e+00, 1e+01]
+  QLMatrix range   [1e+00, 2e+03]
+  Objective range  [5e+01, 6e+02]
+  QObjective range [2e+02, 2e+03]
+  Bounds range     [1e+00, 1e+03]
+  RHS range        [1e+00, 1e+03]
+  QRHS range       [2e+03, 2e+03]
+Presolve added 4 rows and 0 columns
+Presolve removed 0 rows and 34 columns
+Presolve time: 0.02s
+Presolved: 536 rows, 265 columns, 2845 nonzeros
+Presolved model has 12 SOS constraint(s)
+Variable types: 69 continuous, 196 integer (196 binary)
+Found heuristic solution: objective 2850.0910000
+
+Root relaxation: objective 1.224914e+03, 69 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1224.91441    0   15 2850.09100 1224.91441  57.0%     -    0s
+H    0     0                    2672.9020000 1224.91441  54.2%     -    0s
+     0     0 1365.88500    0   12 2672.90200 1365.88500  48.9%     -    0s
+H    0     0                    2445.6390000 1365.88500  44.2%     -    0s
+     0     0 1365.88500    0   14 2445.63900 1365.88500  44.2%     -    0s
+     0     0 1365.88500    0   15 2445.63900 1365.88500  44.2%     -    0s
+     0     0 1365.88500    0   18 2445.63900 1365.88500  44.2%     -    0s
+H    0     0                    2257.3280000 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   18 2257.32800 1365.88500  39.5%     -    0s
+H    0     0                    2256.6660000 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   14 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   19 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   17 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   14 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   15 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   13 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   16 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   12 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   17 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   14 2256.66600 1365.88500  39.5%     -    0s
+     0     0 1365.88500    0   13 2256.66600 1365.88500  39.5%     -    0s
+     0     2 1365.88500    0   13 2256.66600 1365.88500  39.5%     -    0s
+  7562  1891 infeasible   29      2256.66600 1614.18259  28.5%  15.8    5s
+ 14469  2717 1770.67100   24   60 2256.66600 1752.77330  22.3%  16.0   10s
+ 15622  2875     cutoff   41      2256.66600 1752.77330  22.3%  16.1   15s
+ 26439  2347 2191.59868   43   18 2256.66600 1752.77330  22.3%  15.4   20s
+ 39978  2769     cutoff   43      2256.66600 1871.06500  17.1%  14.5   25s
+ 53370   963 2057.32800   52    4 2256.66600 2057.32800  8.83%  13.8   30s
+
+Cutting planes:
+  Learned: 1
+  Gomory: 1
+  Implied bound: 4
+  MIR: 10
+  Flow cover: 18
+  Inf proof: 3
+  Zero half: 1
+  RLT: 1
+  Relax-and-lift: 2
+  BQP: 1
+
+Explored 56044 nodes (765995 simplex iterations) in 30.91 seconds (23.03 work units)
+Thread count was 2 (of 16 available processors)
+
+Solution count 7: 2256.67 2256.67 2257.33 ... 2850.09
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.256666000001e+03, best bound 2.256666000000e+03, gap 0.0000%
+Gurobi 12.0.0: optimal solution; objective 2256.666
+765995 simplex iterations
+56044 branching nodes
+absmipgap=9.89985e-10, relmipgap=4.38694e-13
+
+suffix bestbound OUT;

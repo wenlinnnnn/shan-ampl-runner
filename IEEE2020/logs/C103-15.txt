@@ -1,0 +1,69 @@
+Gurobi 12.0.1:   lim:time = 28800
+  tech:threads = 2
+  mip:bestbound = 1
+Set parameter LogToConsole to value 1
+  tech:outlev = 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 2 threads
+
+Non-default parameters:
+TimeLimit  28800
+InfUnbdInfo  1
+Threads  2
+
+Optimize a model with 2806 rows, 1109 columns and 10783 nonzeros
+Model fingerprint: 0x48ffeca6
+Model has 465 quadratic objective terms
+Model has 465 quadratic constraints
+Variable types: 126 continuous, 983 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+03]
+  QMatrix range    [1e+00, 1e+01]
+  QLMatrix range   [1e+00, 2e+03]
+  Objective range  [3e+01, 7e+02]
+  QObjective range [2e+02, 2e+03]
+  Bounds range     [1e+00, 1e+03]
+  RHS range        [1e+00, 1e+03]
+  QRHS range       [2e+03, 2e+03]
+Presolve added 309 rows and 0 columns
+Presolve removed 0 rows and 85 columns
+Presolve time: 0.13s
+Presolved: 3658 rows, 1522 columns, 24523 nonzeros
+Presolved model has 30 SOS constraint(s)
+Variable types: 180 continuous, 1342 integer (1342 binary)
+Found heuristic solution: objective 13239.378000
+
+Root relaxation: objective 2.171437e+03, 163 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2171.43695    0   25 13239.3780 2171.43695  83.6%     -    0s
+H    0     0                    12269.538006 2171.43695  82.3%     -    0s
+H    0     0                    11149.221003 2171.43695  80.5%     -    0s
+H    0     0                    10411.965003 2171.43695  79.1%     -    0s
+H    0     0                    10201.863003 2171.43695  78.7%     -    0s
+     0     0 2199.95087    0   33 10201.8630 2199.95087  78.4%     -    0s
+H    0     0                    8832.4530029 2208.51340  75.0%     -    0s
+     0     0 2208.51340    0   37 8832.45300 2208.51340  75.0%     -    0s
+     0     0 2208.51340    0   37 8832.45300 2208.51340  75.0%     -    0s
+     0     0 2259.37694    0   34 8832.45300 2259.37694  74.4%     -    0s
+     0     0 2260.06739    0   34 8832.45300 2260.06739  74.4%     -    0s
+     0     0 2277.73850    0   36 8832.45300 2277.73850  74.2%     -    0s
+H    0     0                    7984.1060000 2281.90400  71.4%     -    0s
+     0     0 2281.90400    0   36 7984.10600 2281.90400  71.4%     -    0s
+     0     0 2281.90400    0   37 7984.10600 2281.90400  71.4%     -    0s
+     0     0 2281.90400    0   37 7984.10600 2281.90400  71.4%     -    1s
+     0     0 2281.90400    0   34 7984.10600 2281.90400  71.4%     -    1s
+     0     0 2281.90400    0   36 7984.10600 2281.90400  71.4%     -    1s
+     0     0 2281.90400    0   29 7984.10600 2281.90400  71.4%     -    1s
+H    0     0                    7681.7990000 2281.90400  70.3%     -    1s
+     0     0 2281.90400    0   31 7681.79900 2281.90400  70.3%     -    1s
+     0     0 2281.90400    0   30 7681.79900 2281.90400  70.3%     -    2s
+     0     0 2281.90400    0   28 7681.79900 2281.90400  70.3%     -    2s
+     0     0 2281.90400    0   32 7681.79900 2281.90400  70.3%     -    2s
+     0     0 2281.90400    0   31 7681.79900 2281.90400  70.3%     -    2s
+     0     2 2281.90400    0   29 7681.79900 2281.90400  70.3%     -    2s

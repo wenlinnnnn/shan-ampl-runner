@@ -173,11 +173,12 @@ if __name__ == "__main__":
         chosen_instances = shan_pc_instances
     elif PC == "WORKSTATION":
         chosen_instances = workstation_pc_instances
+    chosen_instances = all_instances
     time_limit = 28800
     num_threads = 2
-    num_cpus = os.cpu_count()
+    num_cpus = os.cpu_count() - 2
     if num_cpus is None:
-        num_cpus = 8
+        num_cpus = 8 - 2
     num_workers = int(num_cpus/num_threads)
     print(f"Number of instances to be run: {len(chosen_instances)}")
     print(f"Running {num_workers} instances in parallel")

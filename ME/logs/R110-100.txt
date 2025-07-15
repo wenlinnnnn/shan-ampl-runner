@@ -1,0 +1,57 @@
+Gurobi 12.0.1:   lim:time = 28800
+  tech:threads = 2
+  mip:bestbound = 1
+Set parameter LogToConsole to value 1
+  tech:outlev = 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (26100.2))
+
+CPU model: Intel(R) Xeon(R) Silver 4208 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 16 physical cores, 32 logical processors, using up to 2 threads
+
+Non-default parameters:
+TimeLimit  28800
+InfUnbdInfo  1
+Threads  2
+
+Optimize a model with 218512 rows, 83553 columns and 3008026 nonzeros
+Model fingerprint: 0x10fefb10
+Model has 21130 quadratic objective terms
+Model has 31630 quadratic constraints
+Model has 100 simple general constraints
+  100 MAX
+Variable types: 1717 continuous, 81836 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  QMatrix range    [1e+00, 7e+01]
+  QLMatrix range   [1e+00, 3e+02]
+  Objective range  [1e+01, 9e+03]
+  QObjective range [2e+02, 1e+04]
+  Bounds range     [1e+00, 2e+02]
+  RHS range        [1e+00, 3e+02]
+  QRHS range       [7e+01, 2e+02]
+Presolve removed 32833 rows and 11907 columns (presolve time = 5s)...
+Presolve removed 32833 rows and 11907 columns (presolve time = 10s)...
+Presolve removed 40339 rows and 11907 columns (presolve time = 15s)...
+Presolve removed 43854 rows and 12007 columns (presolve time = 20s)...
+Presolve removed 44195 rows and 12007 columns (presolve time = 25s)...
+Presolve removed 44195 rows and 12299 columns (presolve time = 39s)...
+Presolve removed 22264 rows and 11889 columns
+Presolve time: 39.31s
+Presolved: 5353324 rows, 3661167 columns, 18674936 nonzeros
+Presolved model has 210 SOS constraint(s)
+Variable types: 2012351 continuous, 1648816 integer (1648611 binary)
+
+Explored 1 nodes (0 simplex iterations) in 813.64 seconds (307.89 work units)
+Thread count was 2 (of 32 available processors)
+
+Solution count 0
+
+Solve interrupted (error code 10001)
+Best objective -, best bound 0.000000000000e+00, gap -
+Gurobi 12.0.1: Call failed: 'GRBoptimize(model())' with code 10001,
+Gurobi message: Out of memory
+Error at _cmdno 6 executing "printf" command
+(file C:\Users\ma003\Desktop\shan-ampl-runner\ME\runfiles\data_100\R110-100.run, line 36, offset 762):
+
+	can't open "ampl_outputs/data_100/R110-100.txt"

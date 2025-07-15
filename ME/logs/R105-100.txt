@@ -1,0 +1,182 @@
+Gurobi 12.0.1:   lim:time = 28800
+  mip:bestbound = 1
+Set parameter LogToConsole to value 1
+  tech:outlev = 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 16 threads
+
+Non-default parameters:
+TimeLimit  28800
+InfUnbdInfo  1
+
+Optimize a model with 212860 rows, 78235 columns and 2876526 nonzeros
+Model fingerprint: 0x61378074
+Model has 20630 quadratic objective terms
+Model has 31630 quadratic constraints
+Model has 100 simple general constraints
+  100 MAX
+Variable types: 1718 continuous, 76517 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  QMatrix range    [1e+00, 6e+01]
+  QLMatrix range   [1e+00, 3e+02]
+  Objective range  [1e+01, 8e+03]
+  QObjective range [2e+02, 1e+04]
+  Bounds range     [1e+00, 2e+02]
+  RHS range        [1e+00, 4e+02]
+  QRHS range       [6e+01, 2e+02]
+Presolve removed 44854 rows and 12083 columns (presolve time = 5s)...
+Presolve removed 48425 rows and 12183 columns (presolve time = 10s)...
+Presolve removed 26493 rows and 12803 columns
+Presolve time: 13.35s
+Presolved: 3699702 rows, 2754727 columns, 14115891 nonzeros
+Presolved model has 210 SOS constraint(s)
+Variable types: 1856351 continuous, 898376 integer (898171 binary)
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 5s
+Ordering time: 7.08s
+
+Barrier performed 0 iterations in 323.12 seconds (370.51 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 20.84s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    3948    7.3671264e+03   0.000000e+00   0.000000e+00    324s
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root crossover log...
+
+     366 DPushes remaining with DInf 0.0000000e+00               326s
+       0 DPushes remaining with DInf 0.0000000e+00               326s
+
+     392 PPushes remaining with PInf 0.0000000e+00               327s
+       0 PPushes remaining with PInf 0.0000000e+00               327s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 9.5701225e-14    327s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    4422    7.3671264e+03   0.000000e+00   0.000000e+00    328s
+
+Root relaxation: objective 7.367126e+03, 4422 iterations, 45.27 seconds (20.79 work units)
+Total elapsed time = 327.79s (DegenMoves)
+Total elapsed time = 332.95s (DegenMoves)
+Total elapsed time = 336.90s (DegenMoves)
+Total elapsed time = 341.24s (DegenMoves)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 7367.12637    0  206          - 7367.12637      -     -  344s
+     0     0 7482.37873    0  391          - 7482.37873      -     -  626s
+     0     0 7493.69894    0  349          - 7493.69894      -     -  657s
+     0     0 7493.69894    0  354          - 7493.69894      -     -  662s
+     0     0 7523.10608    0  401          - 7523.10608      -     -  687s
+     0     0 7523.96498    0  372          - 7523.96498      -     -  702s
+     0     0 7527.43324    0  383          - 7527.43324      -     -  709s
+     0     0 7527.44056    0  385          - 7527.44056      -     -  713s
+     0     0 7536.73665    0  332          - 7536.73665      -     -  732s
+     0     0 7538.98135    0  379          - 7538.98135      -     -  758s
+     0     0 7538.98135    0  351          - 7538.98135      -     -  778s
+     0     0 7538.98135    0  344          - 7538.98135      -     -  791s
+     0     0 7538.98135    0  315          - 7538.98135      -     -  802s
+     0     0 7538.98135    0  313          - 7538.98135      -     -  814s
+     0     0 7538.98135    0  316          - 7538.98135      -     -  824s
+     0     0 7538.98135    0  326          - 7538.98135      -     -  838s
+     0     0 7538.98135    0  207          - 7538.98135      -     -  866s
+     0     0 7538.98135    0  269          - 7538.98135      -     -  880s
+     0     0 7538.98135    0  197          - 7538.98135      -     -  917s
+     0     0 7538.98135    0  299          - 7538.98135      -     -  932s
+     0     0 7538.98135    0  201          - 7538.98135      -     -  970s
+     0     0 7538.98135    0  191          - 7538.98135      -     -  993s
+     0     2 7539.34089    0  191          - 7539.34089      -     - 1166s
+     1     5 7555.78898    1  194          - 7539.34089      -  3224 1175s
+     3     8 7555.91951    2  194          - 7541.68174      -  2048 1191s
+     7    16 7559.10066    3  202          - 7546.57085      -  2925 1214s
+    15    24 7561.53983    4  208          - 7550.50503      -  2680 1227s
+    23    43 7568.83726    5  199          - 7550.93950      -  2028 1254s
+    42    53 7578.47151    7  288          - 7550.93950      -  1557 1274s
+    52    66 7578.75629    8  254          - 7550.93950      -  1570 1295s
+    65    79 7581.06164   10  300          - 7550.93950      -  1527 1315s
+    78    95 7587.22104   12  238          - 7550.93950      -  1478 1337s
+    94   111 7587.22104   13  240          - 7550.93950      -  1327 1357s
+   110   124 7616.80724   15  227          - 7550.93950      -  1251 1374s
+   123   137 7607.32534   15  226          - 7550.93950      -  1188 1391s
+   136   153 7678.40000   16  242          - 7550.93950      -  1186 1407s
+   152   172 7646.54447   16  257          - 7550.93950      -  1161 1422s
+   171   195 7666.32883   19  281          - 7550.93950      -  1077 1439s
+   194   215 7648.25600   20  236          - 7550.93950      -   984 1454s
+   214   237 7648.25600   23  231          - 7550.93950      -   921 1467s
+   236   261 7648.25600   27  244          - 7550.93950      -   849 1482s
+   260   288 7648.25600   28  252          - 7550.93950      -   787 1497s
+   287   315 7648.25600   30  257          - 7550.93950      -   722 1512s
+   314   351 7648.25600   33  250          - 7550.93950      -   668 1526s
+   350   396 7648.25600   36  250          - 7550.93950      -   602 1537s
+   395   438 7648.25600   41  240          - 7550.93950      -   537 1549s
+   437   475 7648.25600   47  230          - 7550.93950      -   492 1560s
+   474   517 7648.25600   51  231          - 7550.93950      -   486 1576s
+   516   565 7648.25600   57  217          - 7550.93950      -   452 1590s
+   564   599 7648.25600   62  212          - 7550.93950      -   418 1605s
+   600   635 7673.86119   66  234          - 7550.93950      -   406 1619s
+   636   677 7652.78357   68  233          - 7550.93950      -   392 1633s
+   678   725 7654.63667   74  212          - 7550.93950      -   375 1644s
+   726   772 7656.58698   80  216          - 7550.93950      -   352 1656s
+   773   813 7802.78537   86  210          - 7550.93950      -   334 1670s
+   814   861 7789.49200   87  208          - 7550.93950      -   324 1683s
+   862   906 7789.49200   93  213          - 7550.93950      -   309 1695s
+   907   954 7804.95100   98  226          - 7550.93950      -   326 1707s
+   955  1002 7804.95100  103  216          - 7550.93950      -   312 1721s
+  1003  1050 7860.11788  108  220          - 7550.93950      -   299 1735s
+
+Cutting planes:
+  Learned: 13
+  Gomory: 2
+  Cover: 22
+  Implied bound: 36
+  Clique: 11
+  MIR: 366
+  GUB cover: 5
+  Zero half: 10
+  RLT: 8
+  Relax-and-lift: 219
+
+Explored 1051 nodes (380382 simplex iterations) in 1750.44 seconds (1760.71 work units)
+Thread count was 16 (of 16 available processors)
+
+Solution count 0
+
+Solve interrupted (error code 10001)
+Best objective -, best bound 7.550939500000e+03, gap -
+
+AMPL MP initial flat model has 78063 variables (205 integer, 76312 binary);
+Objectives: 1 quadratic; 
+Constraints:  212860 linear; 31630 quadratic;
+Algebraic expressions:  100 max;
+
+AMPL MP final model has 78235 variables (205 integer, 76312 binary);
+Objectives: 1 quadratic; 
+Constraints:  212860 linear; 31630 quadratic;
+Algebraic expressions:  100 max;
+
+
+Gurobi 12.0.1: Call failed: 'GRBoptimize(model())' with code 10001,
+Gurobi message: Out of memory
+Error at _cmdno 6 executing "printf" command
+(file C:\Users\user\python\shan-ampl-runner\ME\runfiles\data_100\R105-100.run, line 36, offset 752):
+
+	can't open "ampl_outputs/data_100/R105-100.txt"

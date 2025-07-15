@@ -8,7 +8,7 @@ model EVRPTW_MC_BSV_fix.mod;
 param instance_name symbolic;
 #LOAD THE DATA
 let instance_name := "C101-5.txt";
-data ("data_25/RC202-25.txt");
+data ("data_25/R104-25.txt");
 
 
 let Cb := 1.5 * ((Q / g) * Cr);
@@ -16,7 +16,7 @@ let Cb := 1.5 * ((Q / g) * Cr);
 
 #CHANGE THE SOLVER (optional)
 option solver gurobi;
-option gurobi_options "timelimit=28800 bestbound=1 outlev=1";
+option gurobi_options "timelimit=28800 Threads=2 bestbound=1 outlev=1";
 
 
 
@@ -25,7 +25,7 @@ option gurobi_options "timelimit=28800 bestbound=1 outlev=1";
 solve;
 
 # 設定輸出檔案名稱
-param output_file symbolic default "data_25/RC202-25";
+param output_file symbolic default "data_25/R104-25";
 
 # 設定完整的 Windows 路徑
 param output_dir symbolic default "ampl_outputs/";

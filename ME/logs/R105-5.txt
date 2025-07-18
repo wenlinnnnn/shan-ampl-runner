@@ -1,0 +1,93 @@
+Gurobi 12.0.1:   lim:time = 28800
+  tech:threads = 2
+  mip:bestbound = 1
+Set parameter LogToConsole to value 1
+  tech:outlev = 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 2 threads
+
+Non-default parameters:
+TimeLimit  28800
+InfUnbdInfo  1
+Threads  2
+
+Optimize a model with 1096 rows, 561 columns and 4551 nonzeros
+Model fingerprint: 0xda1bbcb6
+Model has 135 quadratic objective terms
+Model has 160 quadratic constraints
+Model has 5 simple general constraints
+  5 MAX
+Variable types: 122 continuous, 439 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  QMatrix range    [1e+00, 6e+01]
+  QLMatrix range   [1e+00, 3e+02]
+  Objective range  [4e+01, 7e+03]
+  QObjective range [2e+02, 1e+04]
+  Bounds range     [1e+00, 2e+02]
+  RHS range        [1e+00, 3e+02]
+  QRHS range       [6e+01, 2e+02]
+Presolve removed 180 rows and 135 columns
+Presolve time: 0.03s
+Presolved: 1742 rows, 1034 columns, 9016 nonzeros
+Presolved model has 18 SOS constraint(s)
+Variable types: 396 continuous, 638 integer (624 binary)
+Found heuristic solution: objective 4813.2200000
+
+Root relaxation: objective 1.185659e+03, 75 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1185.65869    0   18 4813.22000 1185.65869  75.4%     -    0s
+     0     0 1211.73800    0   24 4813.22000 1211.73800  74.8%     -    0s
+H    0     0                    4730.1200000 1211.73800  74.4%     -    0s
+H    0     0                    4322.2400000 1211.73800  72.0%     -    0s
+     0     0 1211.73800    0   23 4322.24000 1211.73800  72.0%     -    0s
+     0     0 1211.73800    0   26 4322.24000 1211.73800  72.0%     -    0s
+H    0     0                    4223.8750000 1211.73800  71.3%     -    0s
+H    0     0                    4023.8750000 1211.73800  69.9%     -    0s
+     0     0 1211.73800    0   24 4023.87500 1211.73800  69.9%     -    0s
+     0     0 1211.73800    0   18 4023.87500 1211.73800  69.9%     -    0s
+     0     0 1211.73800    0   27 4023.87500 1211.73800  69.9%     -    0s
+     0     0 1211.73800    0   20 4023.87500 1211.73800  69.9%     -    0s
+     0     0 1211.73800    0   22 4023.87500 1211.73800  69.9%     -    0s
+     0     0 1211.73800    0   19 4023.87500 1211.73800  69.9%     -    0s
+     0     0 1211.73800    0   18 4023.87500 1211.73800  69.9%     -    0s
+H    0     0                    3935.2530000 1211.73800  69.2%     -    0s
+     0     2 1211.73800    0   17 3935.25300 1211.73800  69.2%     -    0s
+H   99    77                    3934.7580000 1211.73800  69.2%  19.2    0s
+  6429  1331 3731.40782   25   14 3934.75800 1964.83359  50.1%  15.8    5s
+ 15385   520 3820.45653   29    4 3934.75800 3575.03847  9.14%  14.0   10s
+
+Cutting planes:
+  Learned: 2
+
+Explored 17380 nodes (233387 simplex iterations) in 10.87 seconds (13.44 work units)
+Thread count was 2 (of 16 available processors)
+
+Solution count 8: 3934.76 3935.25 4023.87 ... 4813.22
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.934758000000e+03, best bound 3.934758000000e+03, gap 0.0000%
+
+AMPL MP initial flat model has 552 variables (14 integer, 425 binary);
+Objectives: 1 quadratic; 
+Constraints:  1096 linear; 160 quadratic;
+Algebraic expressions:  5 max;
+
+AMPL MP final model has 561 variables (14 integer, 425 binary);
+Objectives: 1 quadratic; 
+Constraints:  1096 linear; 160 quadratic;
+Algebraic expressions:  5 max;
+
+
+Gurobi 12.0.1: optimal solution; objective 3934.758
+233387 simplex iterations
+17380 branching nodes
+absmipgap=4.54747e-13, relmipgap=0
+
+suffix bestbound OUT;

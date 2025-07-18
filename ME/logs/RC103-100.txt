@@ -1,0 +1,139 @@
+Gurobi 12.0.1:   lim:time = 28800
+  tech:threads = 2
+  mip:bestbound = 1
+Set parameter LogToConsole to value 1
+  tech:outlev = 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (win64 - Windows 11.0 (26100.2))
+
+CPU model: Intel(R) Xeon(R) Silver 4208 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 16 physical cores, 32 logical processors, using up to 2 threads
+
+Non-default parameters:
+TimeLimit  28800
+InfUnbdInfo  1
+Threads  2
+
+Optimize a model with 216099 rows, 81848 columns and 2966393 nonzeros
+Model fingerprint: 0x48bf5cbf
+Model has 20680 quadratic objective terms
+Model has 31630 quadratic constraints
+Model has 100 simple general constraints
+  100 MAX
+Variable types: 1689 continuous, 80159 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  QMatrix range    [1e+00, 8e+01]
+  QLMatrix range   [1e+00, 3e+02]
+  Objective range  [1e+01, 1e+04]
+  QObjective range [2e+02, 2e+04]
+  Bounds range     [1e+00, 2e+02]
+  RHS range        [1e+00, 4e+02]
+  QRHS range       [8e+01, 2e+02]
+Presolve removed 33098 rows and 11879 columns (presolve time = 5s)...
+Presolve removed 33098 rows and 11879 columns (presolve time = 10s)...
+Presolve removed 37968 rows and 12099 columns (presolve time = 15s)...
+Presolve removed 44398 rows and 12199 columns (presolve time = 20s)...
+Presolve removed 45336 rows and 12199 columns (presolve time = 26s)...
+Presolve removed 45336 rows and 12843 columns (presolve time = 38s)...
+Presolve removed 23405 rows and 12433 columns
+Presolve time: 38.22s
+Presolved: 5051768 rows, 3482982 columns, 17779491 nonzeros
+Presolved model has 210 SOS constraint(s)
+Variable types: 1959151 continuous, 1523831 integer (1523626 binary)
+Deterministic concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+
+Barrier performed 0 iterations in 1164.42 seconds (401.37 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 28.07s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    2311    5.6379932e+03   0.000000e+00   0.000000e+00   1167s
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root crossover log...
+
+     576 DPushes remaining with DInf 0.0000000e+00              1173s
+       0 DPushes remaining with DInf 0.0000000e+00              1174s
+
+     205 PPushes remaining with PInf 0.0000000e+00              1174s
+       0 PPushes remaining with PInf 0.0000000e+00              1175s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 2.6312286e-14   1175s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    2936    5.6379932e+03   0.000000e+00   0.000000e+00   1177s
+
+Root relaxation: objective 5.637993e+03, 2936 iterations, 91.82 seconds (22.47 work units)
+Total elapsed time = 1178.12s (DegenMoves)
+Total elapsed time = 1191.23s (DegenMoves)
+Total elapsed time = 1198.74s (DegenMoves)
+Total elapsed time = 1205.16s (DegenMoves)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 5637.99324    0  204          - 5637.99324      -     - 1215s
+     0     0 6142.75646    0  328          - 6142.75646      -     - 1977s
+     0     0 6151.15906    0  310          - 6151.15906      -     - 2094s
+     0     0 6152.34239    0  314          - 6152.34239      -     - 2110s
+     0     0 6255.35361    0  323          - 6255.35361      -     - 2203s
+     0     0 6280.86788    0  312          - 6280.86788      -     - 2250s
+     0     0 6281.42937    0  313          - 6281.42937      -     - 2268s
+     0     0 6339.91838    0  315          - 6339.91838      -     - 2337s
+     0     0 6342.30850    0  313          - 6342.30850      -     - 2478s
+     0     0 6375.53696    0  316          - 6375.53696      -     - 2555s
+     0     0 6379.49091    0  334          - 6379.49091      -     - 2595s
+     0     0 6390.10760    0  339          - 6390.10760      -     - 2639s
+     0     0 6391.00800    0  349          - 6391.00800      -     - 2675s
+     0     0 6396.78032    0  339          - 6396.78032      -     - 2719s
+     0     0 6400.01020    0  339          - 6400.01020      -     - 2769s
+     0     0 6400.01020    0  340          - 6400.01020      -     - 2811s
+     0     0 6400.01020    0  341          - 6400.01020      -     - 2854s
+     0     0 6400.01020    0  355          - 6400.01020      -     - 2887s
+     0     0 6406.04554    0  274          - 6406.04554      -     - 2994s
+     0     2 6406.04554    0  270          - 6406.04554      -     - 3783s
+     1     5 6407.01961    1  274          - 6406.04554      -   542 3816s
+     3     6 6416.74253    2  260          - 6409.59058      -  1470 3839s
+     5    10 6426.51317    3  252          - 6411.39660      -  1140 3889s
+     9    13 6482.04996    4  273          - 6411.39660      -  1084 3928s
+
+Cutting planes:
+  Learned: 20
+  Gomory: 5
+  Cover: 30
+  Implied bound: 38
+  Clique: 21
+  MIR: 34
+  StrongCG: 4
+  GUB cover: 10
+  Zero half: 17
+  RLT: 13
+  Relax-and-lift: 313
+
+Explored 12 nodes (108602 simplex iterations) in 3977.07 seconds (1435.94 work units)
+Thread count was 2 (of 32 available processors)
+
+Solution count 0
+
+Solve interrupted (error code 10001)
+Best objective -, best bound 6.411396600030e+03, gap -
+Gurobi 12.0.1: Call failed: 'GRBoptimize(model())' with code 10001,
+Gurobi message: Out of memory
+Error at _cmdno 6 executing "printf" command
+(file C:\Users\ma003\Desktop\shan-ampl-runner\ME\runfiles\data_100\RC103-100.run, line 36, offset 764):
+
+	can't open "ampl_outputs/data_100/RC103-100.txt"

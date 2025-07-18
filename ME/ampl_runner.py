@@ -219,8 +219,8 @@ if __name__ == "__main__":
         else:
             workstation_pc_instances.append(instance)
 
-    # PC = "GEMILANG"
-    PC = "SHAN"
+    PC = "GEMILANG"
+    # PC = "SHAN"
     # PC = "WORKSTATION"
 
     chosen_instances = gemilang_pc_instances # change this depending whether you ar ein workstaion or els
